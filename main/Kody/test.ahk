@@ -13,7 +13,7 @@ SplashTextOff
 test=1
 loop ,%loopnum%
 {
-test=test+1
+test=:test+1
 SplashTextOn,,, %test%
 sleep 500
 SplashTextOff
@@ -21,7 +21,7 @@ SplashTextOff
 
 SplashTextOn,,, %loopnum%
 sleep 10000
-
+sleep 1000
 ;this sets up the window size so that you dont search the whole screen (it can be slow or anoying if you have something out side of your screen)
 windowsetup(win_x,win_y,win_x2,win_y2)
 
