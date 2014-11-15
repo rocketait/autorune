@@ -5,11 +5,22 @@
 ;remember to put this in (this is in the settmer command back in your menu file) this is where the program will start
 
 kodytest2:
+SplashTextOn,,, start
+InputBox, loopnum , loop Number, how many times should i do this crap?,,,,,,,,1
+SplashTextOff
+SplashTextOn,,, %test%
+SplashTextOff
+test=1
+loop ,%loopnum%
+{
+test=test+1
+SplashTextOn,,, %test%
+sleep 500
+SplashTextOff
+}
 
-
-
-
-
+SplashTextOn,,, %loopnum%
+sleep 10000
 
 ;this sets up the window size so that you dont search the whole screen (it can be slow or anoying if you have something out side of your screen)
 windowsetup(win_x,win_y,win_x2,win_y2)
