@@ -1,5 +1,3 @@
 autorune
 ========
-ya gonna make a hotkey skript bot
-
-runebot
+Helping Kody and Ben make a simple bot for a game.
