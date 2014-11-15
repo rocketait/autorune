@@ -1,3 +1,5 @@
+magic_tree2:
+
 loop{
 WinWait, RuneScape, 
 IfWinNotActive, RuneScape, , WinActivate, RuneScape, 
@@ -48,3 +50,5 @@ Sleep, 10000
 MouseClick, left,  1107,  429
 sleep, 7000
 }
+
+reload

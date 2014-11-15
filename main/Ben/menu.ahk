@@ -14,6 +14,10 @@ Menu, MyMenu, Add, bensub, :bensub
 ; not a submenu item
 Menu, MyMenu, add, bentestitem, bentest
 
+; example of working code
+Menu, trees, Add, sorcerers tower, magic_tree
+Menu, MyMenu, add,  Chop trees, :trees 
+
 ;exit outs of menu
 return
 
@@ -29,7 +33,14 @@ SetTimer, bentest2
 Gosub, doingaction
 return
 
+magic_tree:
+SetTimer, magic_tree2
+Gosub, doingaction
+return
+
+
 ;this copys and pasts your code from your bot file in here
 #include ben\test.ahk
 #include ben\functions.ahk
+#include ben\magic_tree.ahk
 

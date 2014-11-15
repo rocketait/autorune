@@ -1,3 +1,5 @@
+emerald_ring2:
+
 loop 1{
 WinWait, RuneScape, 
 IfWinNotActive, RuneScape, , WinActivate, RuneScape, 
@@ -177,3 +179,5 @@ Sleep, 1800
 MouseClick, left,  1145,  487
 sleep 5000
 }
+
+reload

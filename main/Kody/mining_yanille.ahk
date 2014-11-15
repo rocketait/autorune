@@ -1,3 +1,5 @@
+mining_yanille2:
+
 loop {
 WinWait, RuneScape, 
 IfWinNotActive, RuneScape, , WinActivate, RuneScape, 
@@ -86,3 +88,5 @@ sleep, 4000
 MouseClick, left,  977,  816
 sleep, 4000
 }
+
+reload
