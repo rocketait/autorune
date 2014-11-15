@@ -1,7 +1,7 @@
 emerald_ring2:
 
-loop 1{
-WinWait, RuneScape, 
+InputBox, loopnum , loop Number, how many times should i do this crap?,,,,,,,,1
+loop,1{WinWait, RuneScape, 
 IfWinNotActive, RuneScape, , WinActivate, RuneScape, 
 WinWaitActive, RuneScape, 
 MouseClick, right,  747,  655
