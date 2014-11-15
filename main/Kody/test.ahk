@@ -8,13 +8,14 @@ kodytest2:
 SplashTextOn,,, start
 InputBox, loopnum , loop Number, how many times should i do this crap?,,,,,,,,1
 SplashTextOff
-SplashTextOn,,, %test%
+mytest = 1
+SplashTextOn,,, %mytest%
+sleep 1000
 SplashTextOff
-test=1
 loop ,%loopnum%
 {
-test=:test+1
-SplashTextOn,,, %test%
+mytest := mytest + 1
+SplashTextOn,,, %mytest%
 sleep 500
 SplashTextOff
 }

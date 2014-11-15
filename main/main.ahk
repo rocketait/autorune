@@ -22,7 +22,7 @@ menu, tray, delete, Pause
 menu, tray, add, unpause, upause
 Menu, MyMenu, delete, Pause
 menu, MyMenu, add, unpause, upause
-Menu, Tray, Icon, menu1.exe, 4
+Menu, Tray, Icon,menu.ico, 4
 SetTimer, bpause
 return
 
@@ -40,7 +40,7 @@ menu, tray, add, Pause, apause
 menu, tray, delete, unpause
 Menu, MyMenu, add, Pause, apause
 menu, MyMenu, delete, unpause
-Menu, Tray, Icon, menu1.exe, 1
+Menu, Tray, Icon, menu.ico, 1
 Thread, NoTimers,false
 return
 
