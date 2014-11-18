@@ -1,3 +1,4 @@
+high_alchemy2:
 
 InputBox, loopnum , loop Number, how many times should i do this crap?,,,,,,,,1
 loop,%loopnum%
@@ -22,3 +23,5 @@ send {9 up}
 MouseClick, left,  1645,  827
 Sleep, 3100
 }
+
+reload

@@ -1,3 +1,5 @@
+runecraft_air2:
+
 InputBox, loopnum , loop Number, how many times should i do this crap?,,,,,,,,1
 loop,%loopnum%
 {

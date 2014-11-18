@@ -3,8 +3,11 @@
 
 
 ;remember to put this in (this is in the settmer command back in your menu file) this is where the program will start
-
 kodytest2:
+
+InputBox, window_name , window name, what window should i wait for?,,,,,,,,
+wait_for_window(window_name)
+
 SplashTextOn,,, start
 InputBox, loopnum , loop Number, how many times should i do this crap?,,,,,,,,1
 SplashTextOff
@@ -19,6 +22,46 @@ SplashTextOn,,, %mytest%
 sleep 500
 SplashTextOff
 }
+
+
+SplashTextOn,,, looking for pick!
+sleep 1000
+SplashTextOff
+sleep 1000
+
+; looking for image
+picpath = tan\close.png
+if(findimage(picpath,x,y) != 0) ; if you look for image and you got an error
+{
+msgbox lame i cant find %rawpic% on screen ; suff between { } will be done if error
+}
+MouseMove, x+10, y+10, 50 ; realy slow move (replace with your clicks and stuff x,y is top left of where image was found)
+sleep 1000
+
+
+
+
+
+
+sleep 100000
+WinGetPos, winX, winY,  win2X, win2Y, A
+ImageSearch, FoundX, FoundY, winX, winy, win2X, win2Y, *10 images\tan\close.png
+
+mouseclick, left, FoundX,  FoundY
+if ErrorLevel = 2
+    msgbox Could not conduct the search for test.
+else if ErrorLevel = 1
+{
+msgbox could not find image.
+}
+msgbox worked test.
+
+MouseMove, winX, winY, 50
+msgbox top left
+sleep 1000
+MouseMove, win2X, win2Y, 50
+sleep 1000
+ msgbox bot right
 
 SplashTextOn,,, %loopnum%
 sleep 10000

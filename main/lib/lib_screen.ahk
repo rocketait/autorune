@@ -7,7 +7,13 @@ coordmode Mouse
 	win_y2 := (win_y + win_h)
 }
 
-
+wait_for_window(window_name)
+{
+WinWait,window_name
+IfWinNotActive, window_name
+WinWaitActive, window_name 
+return 0
+}
 
 storagebin(ByRef win_x,ByRef win_y,ByRef win_x2,ByRef win_y2)
 {

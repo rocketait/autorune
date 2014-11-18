@@ -17,6 +17,24 @@ return 0
 return 1
 }
 
+findimage(name, ByRef loc_x,ByRef loc_y)
+{
+WinGetPos, , ,  win2X, win2Y, A
+ImageSearch, loc_x, loc_y,  0, 0, win2X, win2Y, *TransWhite *10 images\%name%
+if ErrorLevel = 2
+{
+    msgbox somthing is wronge with path/name of %name%.
+return 2
+}
+else if ErrorLevel = 1
+{
+return 1
+}
+return 0
+}
+
+
+
 
 findharrow(ByRef loc_x,ByRef loc_y)
 {

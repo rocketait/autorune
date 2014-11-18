@@ -7,12 +7,12 @@ akody:
 ;then if its a submenu you go :menuname else just the label it should go to
 
 ; submenu stuff
-Menu, kodysub, Add, item1, kodytest
-Menu, kodysub, Add, item2, kodytest
+Menu, kodysub, Add, Test, kodytest
+Menu, kodysub, Add, Other Test, kodyothertest
 ; submenu
 Menu, MyMenu, Add, Kodysub, :kodysub 
 ; not a submenu item
-Menu, MyMenu, add, kodytestitem, kodytest
+Menu, MyMenu, add, image_test, image_test
 
 
 ; example of working code
@@ -20,6 +20,8 @@ Menu, minning, Add, mine yanille, mining_yanille
 Menu, MyMenu, add, Minning, :minning
 
 Menu, magic, Add, emerald ring, emerald_ring
+Menu, magic, Add, High Alchemy, high_alchemy
+Menu, magic, Add, Runecraft Air, runecraft_air
 Menu, MyMenu, add, Magic, :magic
 
 
@@ -46,8 +48,33 @@ SetTimer, emerald_ring2
 Gosub, doingaction
 return
 
+image_test:
+SetTimer, image_test2
+Gosub, doingaction
+return
+
+high_alchemy:
+SetTimer, high_alchemy2
+Gosub, doingaction
+return
+
+runecraft_air:
+SetTimer, runecraft_air2
+Gosub, doingaction
+return
+
+kodyothertest:
+SetTimer, kodyothertest2
+Gosub, doingaction
+return
+
+
 ;this copys and pasts your code from your bot file in here
 #include kody\test.ahk
 #include kody\functions.ahk
 #include kody\emerald_ring.ahk
 #include kody\mining_yanille.ahk
+#include kody\Image_Test.ahk
+#include kody\Runecraft_Air.ahk
+#include kody\High_Alchemy.ahk
+#include kody\other_test.ahk
